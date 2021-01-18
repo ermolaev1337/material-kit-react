@@ -1,0 +1,11 @@
+version: '2'
+services:
+  react-ui-kit:
+    working_dir: /usr/app/
+    image: node:latest
+    command: bash -c "npm i && npm run start"
+    volumes:
+      - .:/usr/app/
+    tty: true
+    ports:
+      - "80:3000"
